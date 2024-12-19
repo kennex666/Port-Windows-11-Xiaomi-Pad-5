@@ -1,13 +1,13 @@
 <img align="right" src="https://raw.githubusercontent.com/erdilS/Port-Windows-11-Xiaomi-Pad-5/main/nabu.png" width="425" alt="Windows 11 Running On A Xiaomi Pad 5">
 
-# Running Windows on the Xiaomi Pad 5
+# Chạy Windows trên Xiaomi Pad 5
 
-## Disabling secureboot
+## Vô hiệu secureboot
 > [!Important]
-> Follow this guide only if you want to disable secureboot.
+> Chỉ làm theo khi bạn cần vô hiệu hóa secureboot
 
-### Prerequisites
-- ```Brain```
+### Chuẩn bị
+- ```Một cây vợt Pickleball```
 
 - [```Android platform tools```](https://developer.android.com/studio/releases/platform-tools)
 
@@ -15,103 +15,104 @@
 
 - [```UEFI image (Secureboot off)```](https://github.com/erdilS/Port-Windows-11-Xiaomi-Pad-5/releases/download/UEFI/uefi-NoSecureboot-v3.img)
 
-## Pros and cons of secureboot
-> By default, secureboot is enabled in this guide
+## Lợi và hại khi vô hiệu secureboot
+> Mặc định trong hướng dẫn là sẽ bật
 
-##### Pros and cons of secureboot
-- √ No watermark on homescreen
-- √ Apps that do not work with Test Mode will work
-- √ You can update big versions (e.g 22h2 to 23h2) in Windows update directly
-- × You cannot install unsigned drivers
+##### Ưu và nhược điểm của secureboot
+- √ Không có watermark trên màn hình chính
+- √ Các ứng dụng không hoạt động với Test mode sẽ hoạt động
+- √ Bạn có thể cập nhật các phiên bản lớn (ví dụ: 22h2 lên 23h2) trực tiếp trong bản cập nhật Windows
+- × Bạn không thể cài đặt trình điều khiển chưa được ký
 
 ##### Pros and cons of secureboot disabled
-- √ You can install unsigned drivers
-- × Test mode watermark on homescreen
-- × Some apps/games with anti-cheat software may not work
-- × You cannot update big versions (e.g 22h2 to 23h2) through Windows Update
+- √ Bạn có thể cài đặt trình điều khiển chưa được ký
+- × Có Test mmode watermark trên màn hình chính
+- × Các app/game có anti-cheat có thể không hoạt động
+- × Bạn không thể cập nhật các phiên bản lớn (ví dụ: 22h2 lên 23h2) trực tiếp trong bản cập nhật Windows
 
-## Disabling secureboot
+## Vô hiệu secureboot
 
-#### Make a backup of your rooted boot image
-> You will need this to return to Android, but you can skip this step if you've already made a backup
+#### Tạo một file rooted boot image
+> Bạn sẽ cần trở lại Android, nhưng bạn có thể bỏ qua nếu bạn đã làm file backup
 
-Use the `Backup Android boot` function in the WOA Helper app, or boot to the modded recovery and run
+Sử dụng tính năng `Backup Android boot` trong WOA Helper app, hoặc boot vào recovery custom và chạy lệnh sau:
 ```cmd
 adb shell "dd if=/dev/block/platform/soc/1d84000.ufshc/by-name/boot$(getprop ro.boot.slot_suffix) of=/tmp/rooted_boot.img" && adb pull /tmp/rooted_boot.img
 ```
 
-#### Boot to the recovery
-> Replace <path\to\recovery> with the actual path of the recovery image
+#### Boot vào recovery
+> Thay <path\to\recovery> bằng đường dẫn thực của recovery image
 ```cmd
 fastboot boot <path\to\recovery.img>
 ```
 
 #### Activate mass storage mode
-> Once the Xiaomi Pad 5 has booted into the modded recovery
+> Sau khi Xiaomi Pad 5 khởi động vào chế độ modded recovery, chạy lệnh sau
 ```cmd
 adb shell msc
 ```
 
-#### Start the Windows disk manager
-> Once the Xiaomi Pad 5 is detected as a disk
+#### Chạy Windows disk manager
+> Sau khi Xiaomi Pad 5 được phát hiện là một ổ đĩa
 ```cmd
 diskpart
 ```
 
-#### Select the esp volume of the tablet
-> Use `list volume` to find it, it's the one named "ESPNABU"
+#### Chọn esp volume của tablet
+> Dùng lệnh `list volume` để tìm nó, nó có tên "ESPNABU"
 ```diskpart
 select volume <number>
 ```
 
-#### Assign the letter Y
+#### Gán letter Y
 ```diskpart
 assign letter y
 ```
 
-#### Exit diskpart
+#### Thoát diskpart
 ```diskpart
 exit
 ```
 
-#### Modify the bootloader files
-> To enable test signing
+#### Tuỳ chỉnh bootloader
+> Để enable test signing
 ```cmd
 bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /set "{default}" testsigning on
 ```
 
-#### Removing SiPolicy
+#### Gỡ SiPolicy
 > Assuming you are disabling secureboot on an existing install, you need to delete this file or the system will not boot
+> Đảm bảo bạn đã vô hiệu hóa secureboot trên bản cài đặt hiện có, bạn cần xóa tệp này, nếu không hệ thống sẽ không khởi động
 ```cmd
 del Y:\EFI\Microsoft\Boot\SiPolicy.p7b
 ```
 
-#### Remove the drive letter for ESPNABU
-> If this does not work, ignore it and skip to the next command. This phantom drive will disappear the next time you reboot your PC.
+#### Gỡ drive letter for ESPNABU
+> Nếu không hoạt động, bỏ qua và chuyển sang lệnh tiếp theo. Ổ đĩa ảo này sẽ biến mất lần tiếp theo bạn khởi động lại máy tính của bạn.
 ```cmd
 mountvol y: /d
 ```
 
-#### Reboot to fastboot
+#### Reboot vào fastboot
 ```cmd
 adb reboot bootloader
 ```
 
 #### Flashing the UEFI
-> Make sure you use the no secureboot UEFI from this page, replace <path\to\uefi-NoSecureboot-v3.img> with the actual path to the UEFI image
+> Đảm bảo bạn sử dụng UEFI không secureboot từ trang này, thay <path\to\uefi-NoSecureboot-v3.img> bằng đường dẫn thực tế đến UEFI
 ```cmd
 fastboot flash boot <path\to\uefi-NoSecureboot-v3.img>
 ```
 
 > [!Important]
-> Make sure to also replace your old UEFI in the UEFI folder in your internal storage of Android, so you don't accidentally flash it the next time you try to switch to Windows from Android
+> Đảm bảo cũng thay thế UEFI cũ của bạn trong thư mục UEFI trong bộ nhớ trong của Android, bạn sẽ không vô tình flash nó vào lần tiếp theo khi bạn cố gắng chuyển sang Windows từ Android
 
-#### Reboot to Windows
+#### Reboot vào Windows
 ```cmd
 fastboot reboot
 ```
 
-## Finished!
+## Hoàn tất 💖
 
 
 
