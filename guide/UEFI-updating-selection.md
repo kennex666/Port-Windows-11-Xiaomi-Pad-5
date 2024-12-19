@@ -13,6 +13,7 @@
 - [**`Ukrainian`**](Ukrainian/UEFI-updating-uk.md)
 - [**`Korean`**](Korean/UEFI-updating-ko.md)
 - [**`Simplified Chinese`**](https://github.com/erdilS/Port-Windows-11-Xiaomi-Pad-5/blob/main/guide/Simplified%20Chinese/UEFI-updating-cn.md)
+- [**`Tiếng Việt`**](Vietnamese/UEFI-updating-vi.md)
 
 
 

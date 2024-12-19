@@ -13,6 +13,7 @@
 - [**`Ukrainian`**](Ukrainian/uninstall-uk.md)
 - [**`Korean`**](Korean/uninstall-ko.md)
 - [**`Simplified Chinese`**](Simplified%20Chinese/uninstall-cn.md)
+- [**`Tiếng Việt`**](Vietnamese/uninstall-vi.md)
 
 
 

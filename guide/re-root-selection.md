@@ -13,6 +13,8 @@
 - [**`Ukrainian`**](Ukrainian/re-root-uk.md)
 - [**`Korean`**](Korean/Re-rooting-ko.md)
 - [**`Simplified Chinese`**](Simplified%20Chinese/re-rooting-cn.md)
+- [**`Tiếng Việt`**](Vietnamese/re-rooting-vi.md)
+
 
 
 

@@ -6,7 +6,7 @@
 > While the Xiaomi Pad 5 is currently one of the most supported and stable Android devices to run Windows on, there are some rare issues that may severely affect your device. Make sure you understand these issues before installing Windows.
 
 ## 24H2 EDL issues
-If you installed Windows on your NABU before 07.12.2024 and have not applied the GPT fix, please do so now using [this guide](fix-gpt-en.md) to avoid EDl issues.
+If you installed Windows on your NABU before 07.12.2024 and have not applied the GPT fix, please do so now using [this guide](fix-gpt-vi.md) to avoid EDl issues.
 
 ## White line issues
 In some extremely rare cases, your screen may display white lines after putting it to sleep in Windows. This is a hardware issue caused by Xiaomi shipping out screens with incompatible display configurations.

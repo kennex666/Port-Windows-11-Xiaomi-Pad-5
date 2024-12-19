@@ -12,4 +12,5 @@
 - [**`Russian`**](Russian/dualboot-ru.md)
 - [**`Ukrainian`**](Ukrainian/dualboot-uk.md)
 - [**`Korean`**](Korean/dualboot-ko.md)
+- [**`Tiếng Việt`**](Vietnamese/dualboot-vi.md)
 - ~~[**Simplified Chinese**](Simplified%20Chinese/dualboot-cn.md)~~

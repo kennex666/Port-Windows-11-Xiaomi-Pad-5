@@ -9,7 +9,7 @@ If you don't like your Windows version or you've bricked your Windows install, o
 > Quite obviously, this will erase all of your Windows files. If you'd like to back up any of them, you can do so by mounting Windows using the [WOA Helper](https://github.com/erdilS/Port-Windows-11-Xiaomi-Pad-5/releases/download/dualboot/woahelper.apk) app and manually copying any files you wish to keep
 
 ### Prerequisites
-- ```Existing Windows and boot partitions``` (*If not met, [go back and just pretend this guide never existed](/guide/English/1-partition-en.md)*)
+- ```Existing Windows and boot partitions``` (*If not met, [go back and just pretend this guide never existed](/guide/Vietnamese/1-partition-vi.md)*)
 
 - [```Recovery Image```](https://github.com/erdilS/Port-Windows-11-Xiaomi-Pad-5/releases/download/1.0/recovery.img)
 
@@ -34,4 +34,4 @@ fastboot boot path\to\recovery.img
 adb shell format
 ```
 
-## [Next step: Reinstalling Windows](/guide/English/3-install-en.md)
+## [Next step: Reinstalling Windows](/guide/Vietnamese/3-install-vi.md)

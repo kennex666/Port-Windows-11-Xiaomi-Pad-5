@@ -13,3 +13,4 @@
 - [**`Ukrainian`**](Ukrainian/unlock-bootloader-uk.md)
 - [**`Korean`**](Korean/unlock-bootloader-ko.md)
 - [**`Simplified Chinese`**](Simplified%20Chinese/unlock-bootloader-cn.md)
+- [**`Tiếng Việt`**](Vietnamese/unlock-bootloader-vi.md)

@@ -12,6 +12,7 @@
 - [**`Ukrainian`**](Ukrainian/disable-secureboot-uk.md)
 - [**`Korean`**](Korean/disable-secureboot-ko.md)
 - [**`Simplified Chinese`**](Simplified%20Chinese/disable-secureboot-cn.md)
+- [**`Tiếng Việt`**](Vietnamese/disable-secureboot-vi.md)
 
 
 

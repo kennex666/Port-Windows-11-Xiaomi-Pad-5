@@ -13,6 +13,7 @@
 - [**`Ukrainian`**](Ukrainian/reinstall-uk.md)
 - [**`Korean`**](Korean/reinstall-ko.md)
 - [**`Simplified Chinese`**](Simplified%20Chinese/reinstall-cn.md)
+- [**`Tiếng Việt`**](Vietnamese/reinstall-vi.md)
 
 
 

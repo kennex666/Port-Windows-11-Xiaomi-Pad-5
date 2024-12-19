@@ -5,7 +5,7 @@
 ## Fix the GPT to use Windows 24H2 safely
 
 ### Prerequisites:
-- [```Already installed Windows```](selection-en.md)
+- [```Already installed Windows```](selection-vi.md)
 
 - [```Recovery image```](https://github.com/erdilS/Port-Windows-11-Xiaomi-Pad-5/releases/download/1.0/recovery.img)
 

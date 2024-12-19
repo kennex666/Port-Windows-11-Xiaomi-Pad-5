@@ -4,7 +4,7 @@
 
 ## UEFI Updating
 > [!Warning]
-> If you are updating from the old UEFI (January 15 or before) to UEFI-V3, you also have to update your drivers, which you can do using the [driver updating guide](update-en.md)
+> If you are updating from the old UEFI (January 15 or before) to UEFI-V3, you also have to update your drivers, which you can do using the [driver updating guide](update-vi.md)
 
 ### Why is this guide needed?
 
@@ -16,7 +16,7 @@ Idk, but some people were asking about it
 - [```Latest UEFI```](https://github.com/erdilS/Port-Windows-11-Xiaomi-Pad-5/releases/download/UEFI/uefi-v3.img)
 
 ## Replace old UEFI with the new one
-> If you haven't yet set up dualboot, follow the [dualboot guide](/guide/English/dualboot-en.md) to set up the WOA Helper properly
+> If you haven't yet set up dualboot, follow the [dualboot guide](/guide/Vietnamese/dualboot-vi.md) to set up the WOA Helper properly
 - Boot to Android
 - Open the `UEFI` folder in your internal storage
 - Delete the old UEFI

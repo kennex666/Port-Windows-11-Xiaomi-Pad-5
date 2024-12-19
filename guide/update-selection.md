@@ -13,6 +13,7 @@
 - [**`Ukrainian`**](Ukrainian/update-uk.md)
 - [**`Korean`**](Korean/update-ko.md)
 - [**`Simplified Chinese`**](Simplified%20Chinese/update-cn.md)
+- [**`Tiếng Việt`**](Vietnamese/update-vi.md)
 
 
 
